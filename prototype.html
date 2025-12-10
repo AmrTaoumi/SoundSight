@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SoundSight Prototype</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="prototype-page">
+  <header class="site-header">
+    <div class="container header-inner">
+      <div>
+        <h1>SoundSight – Interactive Prototype</h1>
+        <p class="tagline">Visualising game audio for deaf gamers</p>
+      </div>
+      <nav class="main-nav">
+        <a href="portfolio.html">Back to portfolio</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container prototype-layout">
+      <section class="prototype-panel game-panel">
+        <h2>Game View</h2>
+        <div class="game-screen">
+          <div class="video-bg">
+            <iframe
+              id="video-frame"
+              title="Gameplay video"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+              referrerpolicy="strict-origin-when-cross-origin"
+              loading="lazy"
+            ></iframe>
+            <div class="video-dimmer"></div>
+            <div class="game-hud">
+              <div class="radar" id="radar">
+                <div class="radar-center"></div>
+                <!-- Dynamic sound pings inserted here by JS -->
+              </div>
+              <div class="edge-indicators">
+                <div class="edge-indicator top" id="edge-top"></div>
+                <div class="edge-indicator right" id="edge-right"></div>
+                <div class="edge-indicator bottom" id="edge-bottom"></div>
+                <div class="edge-indicator left" id="edge-left"></div>
+              </div>
+            </div>
+          </div>
+          <p class="screen-caption">
+            Simulated game scene. Use the controls to trigger sound events and see how
+            SoundSight would visualise them.
+          </p>
+        </div>
+      </section>
+
+      <section class="prototype-panel control-panel">
+        <h2>Sound Events</h2>
+        <p>
+          Click an event to generate visual feedback. Each sound type uses a distinct
+          colour and animation so players can quickly understand what is happening.
+        </p>
+
+        <div class="control-group">
+          <h3>Nearby Events</h3>
+          <button class="button button-footsteps" data-event="footsteps">Enemy footsteps</button>
+          <button class="button button-reload" data-event="reload">Weapon reload</button>
+        </div>
+
+        <div class="control-group">
+          <h3>Combat Events</h3>
+          <button class="button button-gunshot" data-event="gunshot">Gunshot (right)</button>
+          <button class="button button-explosion" data-event="explosion">Explosion (behind)</button>
+        </div>
+
+        <div class="control-group">
+          <h3>Team Communication</h3>
+          <button class="button button-voice" data-event="voice">Teammate callout (left)</button>
+        </div>
+
+        <div class="control-group">
+          <h3>Background Gameplay Video</h3>
+          <div class="video-input">
+            <input type="url" id="video-url" placeholder="Paste YouTube URL (e.g. https://youtu.be/VIDEO_ID)" />
+            <button class="button" id="load-video">Load video</button>
+          </div>
+          <p class="small-text">The video will appear behind the HUD in the game view. Some videos or regions block embedding; if you see a player configuration error, try another video or paste a playlist link.</p>
+          <div id="video-error" class="small-text" aria-live="polite"></div>
+        </div>
+
+        <div class="control-group small-text">
+          <h3>Legend</h3>
+          <ul>
+            <li><span class="legend-dot legend-footsteps"></span> Footsteps – soft pulsing circles near centre</li>
+            <li><span class="legend-dot legend-gunshot"></span> Gunshots – sharp flashes on radar &amp; right edge</li>
+            <li><span class="legend-dot legend-explosion"></span> Explosions – large expanding waves &amp; top edge</li>
+            <li><span class="legend-dot legend-voice"></span> Voice – gentle arcs on left side</li>
+            <li><span class="legend-dot legend-reload"></span> Reload – small yellow ticks around player</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>High‑fidelity HTML/CSS/JS prototype</span>
+      <span>For demonstration only – no real audio processing.</span>
+    </div>
+  </footer>
+
+  <script src="prototype.js"></script>
+</body>
+</html>

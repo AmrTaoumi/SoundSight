@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SoundSight – Hearing-aid for Deaf Gamers</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="portfolio-page">
+  <header class="site-header">
+    <div class="container header-inner">
+      <div>
+        <h1>SoundSight</h1>
+        <p class="tagline">Hearing-aid for Deaf Gamers</p>
+      </div>
+      <nav class="main-nav">
+        <a href="#overview">Overview</a>
+        <a href="#problem">Problem</a>
+        <a href="#research">Research</a>
+        <a href="#design">Design</a>
+        <a href="#prototype">Prototype</a>
+        <a href="#team">Team</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="overview" class="section hero">
+      <div class="container hero-inner">
+        <div>
+          <h2>Project Overview</h2>
+          <p>
+            SoundSight is an accessibility companion app that transforms in‑game audio cues
+            into visual and haptic feedback, enabling deaf and hard‑of‑hearing players to
+            compete on an equal footing with hearing players.
+          </p>
+          <p>
+            The system uses on‑device AI to detect and classify game sounds (e.g. footsteps,
+            gunshots, voice chat), then presents them as clear visual indicators and
+            controller vibrations that fit seamlessly into fast‑paced gameplay.
+          </p>
+        </div>
+        <div class="hero-callout">
+          <h3>Coursework Deliverables</h3>
+          <ul>
+            <li>Concept video storyboard &amp; script</li>
+            <li>User research plan &amp; methods</li>
+            <li>Interaction &amp; UI design concepts</li>
+            <li>High‑fidelity HTML/CSS/JS prototype</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="problem" class="section alt">
+      <div class="container two-column">
+        <div>
+          <h2>The Problem</h2>
+          <p>
+            Modern games rely heavily on directional and ambient audio cues: footsteps
+            behind you, bomb plants, enemy reloads, subtle changes in music, or teammates
+            calling out enemy positions. Deaf and hard‑of‑hearing gamers often miss this
+            information entirely, leading to competitive disadvantages and exclusion from
+            key parts of the experience.
+          </p>
+          <p>
+            Existing support is fragmented: some games provide basic subtitles or simple
+            visualizers, while many competitive titles offer almost no meaningful
+            accessibility for non‑hearing players.
+          </p>
+        </div>
+        <div>
+          <h3>Design Goals</h3>
+          <ul>
+            <li>Real‑time feedback with &lt; 50 ms perceived latency</li>
+            <li>Clear visual hierarchy that avoids information overload</li>
+            <li>Highly customizable to different players and games</li>
+            <li>Non‑intrusive overlays that preserve game aesthetics</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="research" class="section">
+      <div class="container two-column">
+        <div>
+          <h2>User Research</h2>
+          <p>
+            We planned a mixed‑methods study combining depth (interviews and contextual
+            inquiries) with breadth (online surveys) and background knowledge (literature
+            review and analysis of existing systems).
+          </p>
+          <h3>Methods</h3>
+          <ul>
+            <li>Semi‑structured interviews with deaf gamers</li>
+            <li>Contextual inquiries during live gameplay sessions</li>
+            <li>Large‑scale online survey of accessibility needs</li>
+            <li>Review of academic papers and design guidelines</li>
+            <li>Competitive analysis of existing game accessibility features</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Key Insights</h3>
+          <ul>
+            <li>
+              Subtitles alone are not enough – players need direction, distance and
+              urgency of sounds.
+            </li>
+            <li>
+              Players have developed complex personal workarounds (watching minimaps,
+              memorising timings, relying on teammates), but these are fragile.
+            </li>
+            <li>
+              Customisation is essential: what counts as a “critical” sound varies by
+              player, game and mode.
+            </li>
+            <li>
+              Multi‑modal feedback (visual + haptic) is more effective than either alone.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="design" class="section alt">
+      <div class="container">
+        <h2>Interaction &amp; UI Design</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>1. Multi‑Modal Feedback</h3>
+            <p>
+              A 360° radar visualises sound events around the player. Colour, size and
+              animation encode sound type and urgency, while optional controller vibration
+              mirrors the same events tactically.
+            </p>
+          </article>
+          <article class="card">
+            <h3>2. AI‑Powered Detection</h3>
+            <p>
+              On‑device machine learning models learn the soundscape of each game and
+              classify important events such as footsteps, gunshots, reloading and voice
+              chat, even when the game itself exposes no API.
+            </p>
+          </article>
+          <article class="card">
+            <h3>3. Community Profiles</h3>
+            <p>
+              Players can share and rate profiles tuned for specific games and modes,
+              allowing newcomers to start from proven configurations instead of designing
+              from scratch.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="prototype" class="section">
+      <div class="container two-column prototype-summary">
+        <div>
+          <h2>High‑Fidelity Prototype</h2>
+          <p>
+            The interactive web prototype demonstrates how SoundSight visualises different
+            categories of sound. Users can trigger example events such as footsteps,
+            gunshots and explosions, and observe how the radar and edge indicators react
+            in real time.
+          </p>
+          <p>
+            The prototype is built with basic HTML, CSS and JavaScript so it can be opened
+            locally in any modern browser.
+          </p>
+        </div>
+        <div class="prototype-links">
+          <a class="button" href="prototype.html">Open Interactive Prototype</a>
+          <p class="file-note">(Open <code>prototype.html</code> in your browser.)</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="team" class="section alt">
+      <div class="container">
+        <h2>Team &amp; Contributions</h2>
+        <p>
+          The project was developed collaboratively. Roles below reflect the main focus
+          areas, but many tasks were shared.
+        </p>
+        <ul class="team-list">
+          <li><strong>Teammate 1</strong> – Concept video, interviews, Section 1 &amp; 2</li>
+          <li><strong>Teammate 2</strong> – Similar systems analysis, Section 1</li>
+          <li><strong>Teammate 3</strong> – Literature review on deaf gaming and accessibility</li>
+          <li><strong>Teammate 4</strong> – Prototyping, interaction design, Section 1 &amp; 2</li>
+          <li><strong>Teammate 5</strong> – Scenarios, Section 3 concepts, storytelling</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>SoundSight – HCI Coursework Portfolio</span>
+      <span>Accessibility first. No gamer left behind.</span>
+    </div>
+  </footer>
+</body>
+</html>

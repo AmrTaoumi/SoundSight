@@ -96,9 +96,10 @@
 
   function triggerEdge(el, className) {
     if (!el) return;
-    el.className = `edge-indicator ${className} edge-indicator--active`;
+    // Preserve positional classes (top/right/bottom/left) and only toggle effect-specific classes
+    el.classList.add(className, 'edge-indicator--active');
     setTimeout(() => {
-      el.className = 'edge-indicator';
+      el.classList.remove(className, 'edge-indicator--active');
     }, 550);
   }
 

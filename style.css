@@ -304,8 +304,8 @@ ul {
   position: absolute;
   bottom: 1.3rem;
   left: 1.3rem;
-  width: 170px;
-  height: 170px;
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
   background: radial-gradient(circle, rgba(15, 23, 42, 0.9) 0, rgba(15, 23, 42, 0.7) 50%, rgba(15, 23, 42, 0.2) 100%);
   border: 1px solid rgba(148, 163, 184, 0.6);
